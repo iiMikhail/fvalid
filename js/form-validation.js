@@ -23,15 +23,13 @@ $(document).ready(function(){
 					//проверка заполненности input
 					var input = $(val),
 						value = input.val().trim(),
-						formGroup = input.parents('.form_group'),
+						formGroup = input.parents('.form__group'),
 						label = formGroup.find('label').text().toLowerCase(),
 						textError = "Вы не ввели " + label,
 						tooltip = $('<span class="form__tooltip ">' + textError + '</span>')
-						// console.log(formGroup);
-					if ( value.lenght === 0 ){
+					if ( value.length === 0 ){
 						formGroup.addClass('error');
 						tooltip.appendTo(formGroup);
-						console.log(formGroup);
 					}
 				});
 
